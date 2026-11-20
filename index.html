@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVO | كوتشيات وأحذية فاخرة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cinzel:wght@500;700;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="splash"><div class="sp-logo">DEVO</div><div class="sp-line"></div><div class="sp-sub">LUXURY FOOTWEAR · SOHAG</div></div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="notif" id="notif">✓ تمت الإضافة للسلة</div>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <a href="#" class="logo" onclick="showPage('home')">
+    <div class="logo-dot"></div>
+    DEVO
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" class="active" id="nav-home" onclick="showPage('home');return false;">الرئيسية</a></li>
+    <li><a href="#" id="nav-products" onclick="showPage('products');return false;">المنتجات</a></li>
+    <li><a href="#" id="nav-order" onclick="showPage('order');return false;">اطلب الآن</a></li>
+    <li><a href="#" id="nav-contact" onclick="showPage('contact');return false;">تواصل معنا</a></li>
+    <li><a href="#" id="nav-admin" onclick="showPage('admin');return false;">🔐 الداشبورد</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="showPage('order')">
+      🛒 السلة <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================================== -->
+<!-- HOME PAGE -->
+<!-- ===================================== -->
+<div class="page active" id="home-page">
+
+  <section class="hero">
+    <div class="hero-bg-text">DEVO DEVO DEVO DEVO DEVO DEVO</div>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-label">✦ الكولكشن الجديد 2026</div>
+        <h1 class="hero-title">
+          <span>STEP</span>
+          <span class="hl">INTO</span>
+          <span class="hl2">STYLE</span>
+        </h1>
+        <p class="hero-desc">اكتشف أحدث كولكشن من الكوتشيات والأحذية الفاخرة — Classic، Casual، وNew Collection لكل مناسبة وكل ستايل.</p>
+        <div class="hero-btns">
+          <button class="btn-main" onclick="showPage('products')">🔥 تسوق الآن</button>
+          <button class="btn-ghost" onclick="showPage('order')">📦 اطلب بالشحن</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="shoe-showcase">
+          <div class="showcase-ring"></div>
+          <div class="showcase-ring"></div>
+          <div class="showcase-emoji"><img src="https://images.unsplash.com/photo-1686067776426-9646eb4b5796?auto=format&fit=crop&w=900&q=70" alt="DEVO sneakers"></div>
+          <div class="showcase-label sl1">
+            <div class="sl-name">أعلى تقييماً</div>
+            <div class="sl-val">Air Classic Pro</div>
+            <div class="sl-badge">⭐ 4.9</div>
+          </div>
+          <div class="showcase-label sl2">
+            <div class="sl-name">السعر يبدأ من</div>
+            <div class="sl-val">299 جنيه</div>
+            <div class="sl-badge">🚀 توصيل سريع</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item">CLASSIC COLLECTION <span>✦</span></div>
+      <div class="marquee-item">CASUAL VIBES <span>✦</span></div>
+      <div class="marquee-item">NEW ARRIVALS <span>✦</span></div>
+      <div class="marquee-item">FREE SHIPPING <span>✦</span></div>
+      <div class="marquee-item">DEVO <span>✦</span></div>
+      <div class="marquee-item">SOHAG DELIVERY <span>✦</span></div>
+      <div class="marquee-item">CLASSIC COLLECTION <span>✦</span></div>
+      <div class="marquee-item">CASUAL VIBES <span>✦</span></div>
+      <div class="marquee-item">NEW ARRIVALS <span>✦</span></div>
+      <div class="marquee-item">FREE SHIPPING <span>✦</span></div>
+    </div>
+  </div>
+
+  <section class="featured reveal">
+    <div class="sec-header">
+      <div class="sec-tag">الأكثر مبيعاً</div>
+      <div class="sec-title">FEATURED <span>PICKS</span></div>
+    </div>
+    <div class="featured-grid">
+      <div class="product-card" onclick="addToCart('Air Max Classic','399')">
+        <div class="product-badge badge-hot">🔥 HOT</div>
+        <div class="product-img tall" style="font-size:6rem;min-height:220px;"><img src="https://images.unsplash.com/photo-1654130491481-dc83a0a05e4e?auto=format&fit=crop&w=700&q=70" alt="Air Max" loading="lazy" onerror="this.replaceWith(document.createTextNode('👟'))">
+          <div class="product-img-overlay"></div>
+          <button class="quick-add" onclick="event.stopPropagation();addToCart('Air Max Classic','399')">أضف للسلة</button>
+        </div>
+        <div class="product-info">
+          <div class="product-cat">CLASSIC</div>
+          <div class="product-name">Air Max Classic Pro</div>
+          <div class="product-price-row">
+            <div><span class="product-price-old">499 ج</span><span class="product-price">399 جنيه</span></div>
+            <button class="add-cart-btn" onclick="event.stopPropagation();addToCart('Air Max Classic','399')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="addToCart('Street Casual','299')">
+        <div class="product-badge badge-new">✨ NEW</div>
+        <div class="product-img sq" style="font-size:4rem;min-height:160px;"><img src="https://images.unsplash.com/photo-1679284392805-1b7f8e2e3f21?auto=format&fit=crop&w=700&q=70" alt="Classic Low" loading="lazy" onerror="this.replaceWith(document.createTextNode('🥿'))">
+          <div class="product-img-overlay"></div>
+          <button class="quick-add" onclick="event.stopPropagation();addToCart('Street Casual','299')">أضف للسلة</button>
+        </div>
+        <div class="product-info">
+          <div class="product-cat">CASUAL</div>
+          <div class="product-name">Street Casual Slip-On</div>
+          <div class="product-price-row">
+            <span class="product-price">299 جنيه</span>
+            <button class="add-cart-btn" onclick="event.stopPropagation();addToCart('Street Casual','299')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="addToCart('Urban Runner','459')">
+        <div class="product-badge badge-new">🆕 2026</div>
+        <div class="product-img sq" style="font-size:4rem;min-height:160px;background:linear-gradient(135deg,#1a1520,#251a30);"><img src="https://images.unsplash.com/photo-1686067776426-9646eb4b5796?auto=format&fit=crop&w=700&q=70" alt="Urban Runner" loading="lazy" onerror="this.replaceWith(document.createTextNode('👠'))">
+          <div class="product-img-overlay"></div>
+          <button class="quick-add" onclick="event.stopPropagation();addToCart('Urban Runner','459')">أضف للسلة</button>
+        </div>
+        <div class="product-info">
+          <div class="product-cat">NEW COLLECTION</div>
+          <div class="product-name">Urban Runner 2026</div>
+          <div class="product-price-row">
+            <span class="product-price">459 جنيه</span>
+            <button class="add-cart-btn" onclick="event.stopPropagation();addToCart('Urban Runner','459')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="promo-banner reveal" style="margin-bottom:5rem;">
+    <div class="promo-text">
+      <div class="promo-tag">✦ عرض محدود ✦</div>
+      <div class="promo-title">END OF SEASON SALE</div>
+      <div class="promo-sub">على آخر قطع من الكولكشن السابق</div>
+      <button class="btn-main" style="margin-top:1.5rem;" onclick="showPage('products')">تسوق العروض →</button>
+    </div>
+    <div class="promo-discount">30%<br><small>خصم على مختارات</small></div>
+  </div>
+
+</div>
+
+<!-- ===================================== -->
+<!-- PRODUCTS PAGE -->
+<!-- ===================================== -->
+<div class="page" id="products-page">
+  <div class="products-hero">
+    <div class="sec-tag" style="justify-content:center;margin-bottom:0.5rem;">✦ كل الأصناف ✦</div>
+    <div class="big-title">OUR <span>COLLECTION</span></div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('all',this)">🌟 الكل</button>
+    <button class="filter-btn" onclick="filterProducts('classic',this)">👞 Classic</button>
+    <button class="filter-btn" onclick="filterProducts('casual',this)">👟 Casual</button>
+    <button class="filter-btn" onclick="filterProducts('new',this)">🆕 New Collection</button>
+    <button class="filter-btn" onclick="filterProducts('sale',this)">🔥 Sale</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+    <!-- Products injected by JS -->
+  </div>
+</div>
+
+<!-- ===================================== -->
+<!-- ORDER PAGE -->
+<!-- ===================================== -->
+<div class="page" id="order-page">
+  <div class="order-wrap">
+    <div class="order-form-box">
+      <div class="order-title">ORDER NOW</div>
+      <div class="order-subtitle">أكمل بياناتك وسنوصّل لك أسرع ما يمكن</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>الاسم الكامل</label>
+          <input type="text" id="o-name" placeholder="اسمك هنا">
+        </div>
+        <div class="form-group">
+          <label>رقم الهاتف</label>
+          <input type="tel" id="o-phone" placeholder="01X XXXX XXXX">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>العنوان بالتفصيل</label>
+        <input type="text" id="o-address" placeholder="المنطقة / الشارع / رقم العقار">
+      </div>
+
+      <div class="form-group">
+        <label>المنتج المطلوب</label>
+        <select id="o-product">
+          <option value="">-- اختر المنتج --</option>
+          <option value="Air Max Classic|399">Air Max Classic Pro - 399 ج</option>
+          <option value="Street Casual|299">Street Casual Slip-On - 299 ج</option>
+          <option value="Urban Runner|459">Urban Runner 2026 - 459 ج</option>
+          <option value="Retro Leather|549">Retro Leather Oxford - 549 ج</option>
+          <option value="Neon Boost|379">Neon Boost Runner - 379 ج</option>
+          <option value="Shadow Classic|329">Shadow Classic Low - 329 ج</option>
+          <option value="Cloud Walk|419">Cloud Walk Premium - 419 ج</option>
+          <option value="Sport Flex|289">Sport Flex Mesh - 289 ج</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>المقاس</label>
+          <select id="o-size">
+            <option>38</option><option>39</option><option>40</option>
+            <option>41</option><option>42</option><option>43</option>
+            <option>44</option><option>45</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>الكمية</label>
+          <select id="o-qty" onchange="calcTotal()">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>خيار الشحن</label>
+        <div class="shipping-opts">
+          <div class="ship-opt selected" id="ship-sohag" onclick="selectShip('sohag')">
+            <div class="ship-opt-icon">🏙️</div>
+            <div class="ship-opt-name">داخل سوهاج</div>
+            <div class="ship-opt-price">مجاني 🎉</div>
+            <div class="ship-opt-desc">توصيل خلال يوم</div>
+          </div>
+          <div class="ship-opt" id="ship-outside" onclick="selectShip('outside')">
+            <div class="ship-opt-icon">🚚</div>
+            <div class="ship-opt-name">خارج سوهاج</div>
+            <div class="ship-opt-price">+50 جنيه</div>
+            <div class="ship-opt-desc">2-3 أيام عمل</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>ملاحظات إضافية (اختياري)</label>
+        <textarea id="o-notes" rows="2" placeholder="أي تفاصيل تريد إضافتها..."></textarea>
+      </div>
+
+      <button class="order-btn" onclick="submitOrder()">✅ تأكيد الطلب والشحن</button>
+      <div class="success-toast" id="orderSuccess">🎉 تم استلام طلبك! سيتواصل معك فريقنا قريباً.</div>
+    </div>
+
+    <div class="order-summary">
+      <div class="summary-box">
+        <div class="summary-title">ملخص السلة</div>
+        <div class="cart-items" id="cartItems">
+          <div class="empty-cart">🛒<br>السلة فارغة<br><small>أضف منتجات من المتجر</small></div>
+        </div>
+        <div class="summary-row"><span>إجمالي المنتجات</span><span id="subtotalVal">0 ج</span></div>
+        <div class="summary-row"><span>رسوم الشحن</span><span id="shippingVal">مجاني</span></div>
+        <div class="summary-row total"><span>الإجمالي النهائي</span><span id="totalVal">0 ج</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================== -->
+<!-- CONTACT PAGE -->
+<!-- ===================================== -->
+<div class="page" id="contact-page">
+  <div class="contact-hero">
+    <div class="sec-tag" style="justify-content:center;margin-bottom:0.5rem;">✦ نحن هنا ✦</div>
+    <div class="big-title">GET IN <span>TOUCH</span></div>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h3>معلومات المحل</h3>
+      <div class="c-detail">
+        <div class="c-icon">📍</div>
+        <div class="c-text">
+          <label>الموقع</label>
+          <span>شارع الجمهورية، سوهاج</span>
+        </div>
+      </div>
+      <div class="c-detail">
+        <div class="c-icon">📞</div>
+        <div class="c-text">
+          <label>رقم الهاتف</label>
+          <span class="ph">01234567890</span>
+        </div>
+      </div>
+      <div class="c-detail">
+        <div class="c-icon">📱</div>
+        <div class="c-text">
+          <label>واتساب</label>
+          <span class="ph">01234567890</span>
+        </div>
+      </div>
+      <div class="c-detail">
+        <div class="c-icon">🕐</div>
+        <div class="c-text">
+          <label>ساعات العمل</label>
+          <span>يومياً من 10 صباحاً حتى 11 مساءً</span>
+        </div>
+      </div>
+      <div class="map-box" onclick="window.open('https://maps.google.com/?q=سوهاج','_blank')">
+        <div class="map-pin">📍</div>
+        <span style="font-size:0.85rem;">سوهاج - شارع الجمهورية</span>
+        <small style="color:var(--accent);font-size:0.72rem;">انقر لفتح الخريطة</small>
+      </div>
+    </div>
+
+    <div class="contact-form-box">
+      <div class="cf-title">SEND MESSAGE</div>
+      <div class="cf-sub">تواصل معنا وسنرد عليك في أقرب وقت</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>الاسم</label>
+          <input type="text" id="c-name" placeholder="اسمك">
+        </div>
+        <div class="form-group">
+          <label>الهاتف / الإيميل</label>
+          <input type="text" id="c-email" placeholder="للتواصل معك">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>الموضوع</label>
+        <select id="c-subject">
+          <option>استفسار عن منتج</option>
+          <option>مشكلة في الطلب</option>
+          <option>اقتراح أو شكوى</option>
+          <option>طلب بالجملة</option>
+          <option>أخرى</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>الرسالة</label>
+        <textarea id="c-msg" rows="5" placeholder="اكتب رسالتك هنا..."></textarea>
+      </div>
+      <button class="send-btn" onclick="sendMessage()">إرسال الرسالة →</button>
+      <div class="success-toast" id="contactSuccess">✅ تم إرسال رسالتك! سنرد عليك قريباً.</div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="admin-page">
+  <div class="login-wrap" id="loginBox">
+    <div class="login-card">
+      <div class="login-logo">DEVO</div>
+      <p class="login-sub">لوحة التحكم · تسجيل الدخول</p>
+      <div class="form-group"><label>اسم المستخدم</label><input id="a-user" autocomplete="username" placeholder="Username"></div>
+      <div class="form-group"><label>كلمة المرور</label><input id="a-pass" type="password" autocomplete="current-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"></div>
+      <button class="order-btn" onclick="doLogin()">دخول ←</button>
+      <div class="login-err" id="loginErr"></div>
+    </div>
+  </div>
+  <div class="dash" id="dash" style="display:none">
+    <div class="d-top">
+      <div><div class="sec-tag">ADMIN PANEL</div><div class="sec-title">DEVO <span>DASHBOARD</span></div></div>
+      <button class="btn-ghost" onclick="doLogout()">خروج 🔒</button>
+    </div>
+    <div class="d-stats" id="d-stats"></div>
+    <div class="filter-bar" style="justify-content:flex-start;padding:1.5rem 0;">
+      <button class="filter-btn active" onclick="showTab('overview',this)">📊 نظرة عامة</button>
+      <button class="filter-btn" onclick="showTab('orders',this)">📦 الطلبات</button>
+      <button class="filter-btn" onclick="showTab('products',this)">👟 المنتجات</button>
+      <button class="filter-btn" onclick="showTab('messages',this)">✉️ الرسائل</button>
+    </div>
+    <div class="dtab" id="t-overview"><div class="d-card"><h4>مبيعات آخر 7 أيام</h4><div id="d-chart"></div></div><div class="d-card"><h4>آخر الطلبات</h4><div class="tbl" id="d-recent"></div></div></div>
+    <div class="dtab" id="t-orders" style="display:none"><div class="d-card"><h4>كل الطلبات</h4><div class="tbl" id="d-orders"></div></div></div>
+    <div class="dtab" id="t-products" style="display:none">
+      <div class="d-card"><h4>إضافة منتج جديد</h4>
+        <div class="p-form">
+          <input id="p-name" placeholder="اسم المنتج"><select id="p-cat"><option value="classic">Classic</option><option value="casual">Casual</option><option value="new">New</option></select>
+          <input id="p-price" type="number" placeholder="السعر"><input id="p-old" type="number" placeholder="السعر القديم (اختياري)"><input id="p-emoji" placeholder="👟" maxlength="2"><input id="p-img" placeholder="رابط صورة المنتج (URL)">
+          <button class="btn-main" onclick="addProd()">+ إضافة</button>
+        </div></div>
+      <div class="d-card"><h4>المنتجات</h4><div class="tbl" id="d-products"></div></div>
+    </div>
+    <div class="dtab" id="t-messages" style="display:none"><div class="d-card"><h4>رسائل العملاء</h4><div id="d-msgs"></div></div></div>
+    <p class="d-note">⚠️ بيانات الداشبورد بتتخزن في متصفح الجهاز ده بس (localStorage). الطلبات المعلّمة "تجريبي" بيانات عرض ويتمسحوا بزر <a href="#" onclick="resetDemo();return false;">مسح البيانات التجريبية</a>.</p>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="f-brand">
+      <a href="#" class="logo" onclick="showPage('home')"><div class="logo-dot"></div>DEVO</a>
+      <p>وجهتك الأولى للكوتشيات والأحذية الفاخرة في سوهاج. جودة عالية، أسعار مناسبة، توصيل سريع.</p>
+    </div>
+    <div class="f-col">
+      <h4>الصفحات</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('home');return false;">الرئيسية</a></li>
+        <li><a href="#" onclick="showPage('products');return false;">المنتجات</a></li>
+        <li><a href="#" onclick="showPage('order');return false;">اطلب الآن</a></li>
+        <li><a href="#" onclick="showPage('contact');return false;">تواصل معنا</a></li>
+        <li><a href="#" onclick="showPage('admin');return false;">الداشبورد</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>الفئات</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('products');filterProducts('classic',null);return false;">Classic</a></li>
+        <li><a href="#" onclick="showPage('products');filterProducts('casual',null);return false;">Casual</a></li>
+        <li><a href="#" onclick="showPage('products');filterProducts('new',null);return false;">New Collection</a></li>
+        <li><a href="#" onclick="showPage('products');filterProducts('sale',null);return false;">Sale</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>الشحن</h4>
+      <ul>
+        <li><a href="#">سوهاج مجاني</a></li>
+        <li><a href="#">خارج سوهاج +50 ج</a></li>
+        <li><a href="#">توصيل يوم واحد</a></li>
+        <li><a href="#">تتبع الطلب</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 DEVO — جميع الحقوق محفوظة</span>
+    <span style="color:var(--accent);">👟 Sohag, Egypt</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
